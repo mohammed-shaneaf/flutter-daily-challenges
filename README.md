@@ -1,16 +1,14 @@
 # flutter_challenges
 
-A new Flutter project.
+🖼️ Flutter UI Challenges – Daily Practice
 
-## Getting Started
+A daily UI challenge series built with Flutter, focused on improving UI design and clean architecture skills.
+Each day’s challenge includes one complete screen implementation with clean, maintainable, and modular code structure. 
 
-This project is a starting point for a Flutter application.
+Day - 001 - 25/10/2025 - product detalis screen 
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+https://github.com/user-attachments/assets/cf190ed1-1df5-44ce-991f-e1de045867b5
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+________________________________________
