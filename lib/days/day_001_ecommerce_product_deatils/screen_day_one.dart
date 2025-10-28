@@ -71,7 +71,7 @@ class _ScreenDayOneState extends State<ScreenDayOne> {
             ProductRating(rating: rating, starCount: starCount),
             CustomDivder(),
             const SizedBox(height: 20),
-            CustomButton(),
+            CustomScreenTwoButton(),
             SizedBox(height: 25),
           ],
         ),

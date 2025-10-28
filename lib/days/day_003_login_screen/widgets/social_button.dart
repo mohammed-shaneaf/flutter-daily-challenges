@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class SocialButton extends StatelessWidget {
   const SocialButton({
@@ -28,7 +27,7 @@ class SocialButton extends StatelessWidget {
         ),
         child: ListTile(
           visualDensity: VisualDensity(vertical: VisualDensity.minimumDensity),
-          leading: SvgPicture.asset(image, width: 24, height: 24),
+          leading: Image.asset(image, width: 24, height: 24),
           title: Text(title, style: TextStyle(fontSize: 16), textAlign: TextAlign.center),
         ),
       ),
