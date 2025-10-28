@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_challenges/days/day_001_ecommerce_product_deatils/widgets/custom_button.dart';
 import 'package:flutter_challenges/days/day_003_login_screen/widgets/social_button.dart';
 
 class ScreenDayThree extends StatelessWidget {
@@ -54,19 +55,7 @@ class ScreenDayThree extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 24),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  maximumSize: Size(double.infinity, 56),
-                  minimumSize: Size(double.infinity, 56),
-                  backgroundColor: Colors.blueAccent,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                ),
-                onPressed: () {},
-                child: Text(
-                  'Log in',
-                  style: TextStyle(fontSize: 16, color: Colors.white),
-                ),
-              ),
+              CustomButton(),
               SizedBox(height: 24),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -89,7 +78,7 @@ class ScreenDayThree extends StatelessWidget {
                 image: 'assets/svgs/facebook.svg',
                 onpressed: () {},
               ),
-              SizedBox()
+              SizedBox(),
             ],
           ),
         ),
