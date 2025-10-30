@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CustomScreenThreeButton extends StatelessWidget {
-  const CustomScreenThreeButton({super.key});
+  const CustomScreenThreeButton({super.key, required this.text});
+
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +15,7 @@ class CustomScreenThreeButton extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
       onPressed: () {},
-      child: Text('Log in', style: TextStyle(fontSize: 16, color: Colors.white)),
+      child: Text(text, style: TextStyle(fontSize: 16, color: Colors.white)),
     );
   }
 }
