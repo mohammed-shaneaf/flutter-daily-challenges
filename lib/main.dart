@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_challenges/days/day_003_login_screen/screen_day_three.dart';
+import 'package:flutter_challenges/days/day_004_register_screen/screen_four.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
   runApp(FlutterDailyChallenges());
@@ -10,6 +11,9 @@ class FlutterDailyChallenges extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: ScreenDayThree());
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      child: MaterialApp(debugShowCheckedModeBanner: false, home: ScreenFour()),
+    );
   }
 }
