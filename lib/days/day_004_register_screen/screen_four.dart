@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_challenges/days/day_004_register_screen/widgets/first_name_and_last_name_text_field.dart';
 import 'package:flutter_challenges/days/day_004_register_screen/widgets/logo_widget.dart';
+import 'package:flutter_challenges/days/day_004_register_screen/widgets/title_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ScreenFour extends StatefulWidget {
@@ -47,94 +49,12 @@ class _ScreenFourState extends State<ScreenFour> {
                 // Logo
                 LogoWidget(),
                 SizedBox(height: 24.h),
+                TitleWidget(),
 
-                Text(
-                  'Get Started now',
-                  style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
-                ),
-                SizedBox(height: 6.h),
-                Text(
-                  'Create an account or log in to explore about our app',
-                  style: TextStyle(fontSize: 13.sp, color: Colors.grey[600]),
-                  textAlign: TextAlign.center,
-                ),
-                SizedBox(height: 28.h),
-
-                Container(
-                  height: 48.h,
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: GestureDetector(
-                          onTap: () => setState(() => isLogin = false),
-                          child: Container(
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: !isLogin ? Colors.white : Colors.transparent,
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: Text(
-                              'Sign Up',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                color: !isLogin ? Colors.blue : Colors.grey[600],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        child: GestureDetector(
-                          onTap: () => setState(() => isLogin = true),
-                          child: Container(
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: isLogin ? Colors.white : Colors.transparent,
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: Text(
-                              'Log In',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                color: isLogin ? Colors.blue : Colors.grey[600],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 32.h),
+                buildLoginToggle(),
 
                 // First & Last Name
-                Row(
-                  children: [
-                    Expanded(
-                      child: TextFormField(
-                        controller: _firstName,
-                        decoration: const InputDecoration(
-                          labelText: 'First Name',
-                          border: OutlineInputBorder(),
-                        ),
-                      ),
-                    ),
-                    SizedBox(width: 12.w),
-                    Expanded(
-                      child: TextFormField(
-                        controller: _lastName,
-                        decoration: const InputDecoration(
-                          labelText: 'Last Name',
-                          border: OutlineInputBorder(),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                FirstAndLastNameTextField(firstName: _firstName, lastName: _lastName),
                 SizedBox(height: 16.h),
 
                 // Email
@@ -234,6 +154,63 @@ class _ScreenFourState extends State<ScreenFour> {
           ),
         ),
       ),
+    );
+  }
+
+  Widget buildLoginToggle() {
+    return Column(
+      children: [
+        Container(
+          height: 48.h,
+          decoration: BoxDecoration(
+            color: Colors.grey.shade200,
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Row(
+            children: [
+              Expanded(
+                child: GestureDetector(
+                  onTap: () => setState(() => isLogin = false),
+                  child: Container(
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: !isLogin ? Colors.white : Colors.transparent,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Text(
+                      'Sign Up',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        color: !isLogin ? Colors.blue : Colors.grey[600],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: GestureDetector(
+                  onTap: () => setState(() => isLogin = true),
+                  child: Container(
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: isLogin ? Colors.white : Colors.transparent,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Text(
+                      'Log In',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        color: isLogin ? Colors.blue : Colors.grey[600],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(height: 32.h),
+      ],
     );
   }
 }
