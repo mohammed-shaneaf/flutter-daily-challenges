@@ -47,7 +47,7 @@ class ScreenDayThree extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 24),
-                CustomScreenThreeButton(),
+                CustomScreenThreeButton(text: 'Login',),
                 SizedBox(height: 24),
                 OrWidget(),
                 SizedBox(height: 24),
